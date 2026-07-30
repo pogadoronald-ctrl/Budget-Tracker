@@ -1,5 +1,5 @@
 import './Header.css'
-import logo from '../../assets/budgio-logo-w-title.svg'
+import logo from '../../assets/logo-title.svg'
 import { LuUser } from "react-icons/lu";
 
 
