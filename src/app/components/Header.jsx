@@ -1,4 +1,5 @@
 import './Header.css'
+import logo from '../../assets/budgio-logo-w-title.svg'
 import { LuUser } from "react-icons/lu";
 
 
@@ -6,7 +7,9 @@ import { LuUser } from "react-icons/lu";
 function Header() {
     return (
         <header className="header shadow-md">
-            <div className="logo">Logo</div>
+            <div className="logo">
+                <img src={logo} alt="Budgio Logo" className="h-20 w-auto"/>
+            </div>
 
             <Pages />
 
