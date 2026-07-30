@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <header className="header shadow-md">
-            <div className="logo pl-4">
+        <header className="header relative shadow-md">
+            <div className="logo pl-8">
                 <img src={logo} alt="Budgio Logo" className="h-14 w-auto"/>
             </div>
 
@@ -20,11 +20,11 @@ function Header() {
 }
 
 const navLinks = [
-    "Overview", 
-    "Transactions",
-    "Budgets",
-    "Categories",
-    "Recurring"
+    { name:"Overview", path: "/"},
+    { name:"Transactions", path: "/transactions"},
+    { name:"Budgets", path: "/budgets"},
+    { name:"Categories", path: "Categories"},
+    { name:"Recurring", path:"Recurring"}
 ]
 
 const navHref = {
@@ -54,26 +54,24 @@ const navClass = `
     relative
     font-semibold
     text-gray-500
+    hover:text-green-400
     transition-colors
     duration-300
-    hover:text-green-400
     after:absolute
     after:left-0
-    after:-bottom-1
+    after:right-0
+    after:bottom-[-24px]
     after:h-[2px]
-    after:w-full
     after:bg-green-400
-    after:translate-y-2
-    after:opacity-0
-    after:transition-all
+    after:scale-x-0
+    after:origin-center
+    after:transition-transform
     after:duration-300
-    hover:after:translate-y-0
-    hover:after:opacity-100
-`;
-const activeNavClass = `
-    text-green-500
-    after:translate-y-0
-    after:opacity-100
+    hover:after:scale-x-100
 `;
 
+const activeNavClass = `
+    text-green-500
+    after:scale-x-100
+`;
 export default Header
