@@ -1,0 +1,42 @@
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.card p {
+    margin-top: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.balance {
+    border-left: 5px solid #3b82f6;
+}
+
+.income {
+    border-left: 5px solid #22c55e;
+}
+
+.expenses {
+    border-left: 5px solid #ef4444;
+}
+
+.savings {
+    border-left: 5px solid #f59e0b;
+}
