@@ -6,6 +6,10 @@ import {
     LuPiggyBank
 } from "react-icons/lu";
 
+import ChartCard from "../../components/ChartCard";
+import IncomeExpenseChart from "../../components/charts/IncomeExpenseChart";
+import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart";
+
 function Dashboard() {
     return (
         <div className="grid grid-cols-4 gap-6">
@@ -33,6 +37,17 @@ function Dashboard() {
                 type="savings"
                 icon={<LuPiggyBank className="text-yellow-500" />}
             />
+
+            <div className="col-span-4 grid grid-cols-3 gap-6">
+                <div className="col-span-2"> 
+                    <ChartCard title="Income vs. Expenses">
+                        <IncomeExpenseChart />
+                    </ChartCard>  
+                </div>  
+                <ChartCard title="Expenses per Category">
+                    <ExpenseCategoryChart />
+                </ChartCard>
+            </div>
 
         </div>
     );
