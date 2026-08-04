@@ -9,6 +9,7 @@ import {
 import ChartCard from "../../components/ChartCard";
 import IncomeExpenseChart from "../../components/charts/IncomeExpenseChart";
 import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart";
+import RecentTransactions from "../../components/tables/RecentTransactions";
 import MonthlySpendingChart from "../../components/charts/MonthlySpendingChart";
 import BudgetLimitChart from "../../components/charts/BudgetLimitChart";
 
@@ -41,24 +42,31 @@ function Dashboard() {
                 icon={<LuPiggyBank className="text-yellow-500" />}
             />
 
-            <div className="col-span-4 grid grid-cols-3 gap-6">
-                <div className="col-span-2"> 
-                    <ChartCard >
-                        <IncomeExpenseChart />
-                    </ChartCard>  
-                </div>  
+            <div className="col-span-4 grid grid-cols-2 gap-6">
                 <ChartCard >
-                    <ExpenseCategoryChart />
+                    <IncomeExpenseChart />
+                </ChartCard>   
+                <ChartCard >
+                    <MonthlySpendingChart />
                 </ChartCard>
-
+                <div className="col-span-2 grid grid-cols-3 gap-6">
                 <div className="col-span-2">
-                    <ChartCard >
-                        <MonthlySpendingChart />
+                    <ChartCard className="h-full">
+                        <RecentTransactions />
                     </ChartCard>
                 </div>
-                <ChartCard >
-                    <BudgetLimitChart />
-                </ChartCard>
+
+                <div className="flex flex-col gap-6">
+                    <ChartCard>
+                        <ExpenseCategoryChart />
+                    </ChartCard>
+
+                    <ChartCard>
+                        <BudgetLimitChart />
+                    </ChartCard>
+                </div>
+            </div>
+                
             </div>
 
         </div>
