@@ -178,7 +178,6 @@ const transactions = [
                         key={transaction.id}
                         className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition"
                     >
-                        {/* Left */}
                         <div className="flex items-center gap-4">
                             <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-xl">
                                 {categoryIcons[transaction.category]}
