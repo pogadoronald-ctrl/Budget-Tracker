@@ -9,6 +9,9 @@ import {
 import ChartCard from "../../components/ChartCard";
 import IncomeExpenseChart from "../../components/charts/IncomeExpenseChart";
 import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart";
+import MonthlySpendingChart from "../../components/charts/MonthlySpendingChart";
+import BudgetLimitChart from "../../components/charts/BudgetLimitChart";
+
 
 function Dashboard() {
     return (
@@ -40,12 +43,21 @@ function Dashboard() {
 
             <div className="col-span-4 grid grid-cols-3 gap-6">
                 <div className="col-span-2"> 
-                    <ChartCard title="Income vs. Expenses">
+                    <ChartCard >
                         <IncomeExpenseChart />
                     </ChartCard>  
                 </div>  
-                <ChartCard title="Expenses per Category">
+                <ChartCard >
                     <ExpenseCategoryChart />
+                </ChartCard>
+
+                <div className="col-span-2">
+                    <ChartCard >
+                        <MonthlySpendingChart />
+                    </ChartCard>
+                </div>
+                <ChartCard >
+                    <BudgetLimitChart />
                 </ChartCard>
             </div>
 
