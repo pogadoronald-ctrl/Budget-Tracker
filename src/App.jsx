@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import MainLayout from './app/layouts/MainLayout.jsx'
-import Dashboard from './app/features/dashboard/dashboard.jsx'
-import Transactions from './app/features/transactions/transactions.jsx'
-import Income from './app/features/income/income.jsx'
-import Budgets from './app/features/budgets/budgets.jsx'
-import Recurring from './app/features/recurring/recurring.jsx'
-import Profile from './app/features/profile/profile.jsx'
+import Dashboard from './app/features/dashboard/Dashboard.jsx'
+import Transactions from './app/features/transactions/Transactions.jsx'
+import Income from './app/features/income/Income.jsx'
+import Budgets from './app/features/budgets/Budgets.jsx'
+import Recurring from './app/features/recurring/Recurring.jsx'
+import Profile from './app/features/profile/Profile.jsx'
 
 export default function App() {
     return (

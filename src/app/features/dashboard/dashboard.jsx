@@ -20,25 +20,25 @@ function Dashboard() {
         <div>
             <div className="flex items-center justify-between mb-8">
 
-            <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-blue-100">
-                    <LuLayoutDashboard className="text-2xl text-blue-600" />
+                <div className="flex items-center gap-3">
+                    <div className="p-3 rounded-xl bg-blue-100">
+                        <LuLayoutDashboard className="text-2xl text-blue-600" />
+                    </div>
+
+                    <div>
+                        <h1 className="text-2xl font-bold">
+                            Welcome Back!
+                        </h1>
+                        <p className="text-sm text-gray-500">
+                            Here's a summary of your finance
+                        </p>
+                    </div>
                 </div>
 
-                <div>
-                    <h1 className="text-2xl font-bold">
-                        Welcome Back!
-                    </h1>
-                    <p className="text-sm text-gray-500">
-                        Here's a summary of your finance
-                    </p>
-                </div>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-3 rounded-xl shadow-sm">
+                    Add Transaction
+                </button>
             </div>
-
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-3 rounded-xl shadow-sm">
-                Add Transaction
-            </button>
-        </div>
 
             <div className="grid grid-cols-4 gap-6">
                 <SummaryCard
