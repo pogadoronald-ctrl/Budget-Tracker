@@ -3,7 +3,7 @@ import logo from '../../assets/logo-title.svg'
 import { LuUser } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
-function Header() {
+export default function Header() {
     return (
         <header className="header relative shadow-md">
             <div className="logo pl-8">
@@ -13,7 +13,12 @@ function Header() {
             <Pages />
 
             <div className="profile">
-                <LuUser size={28} className="text-gray-600" />
+                <NavLink
+                    to="/profile"
+                    className="text-gray-600"
+                > 
+                    <LuUser size={28} />
+                </NavLink>
             </div>
         </header>
     )
@@ -22,14 +27,10 @@ function Header() {
 const navLinks = [
     { name:"Overview", path: "/"},
     { name:"Transactions", path: "/transactions"},
+    { name:"Income", path: "/income"},
     { name:"Budgets", path: "/budgets"},
-    { name:"Categories", path: "Categories"},
-    { name:"Recurring", path:"Recurring"}
+    { name:"Recurring", path:"/recurring"}
 ]
-
-const navHref = {
-
-}
 
 const Pages = () => {
     return (
@@ -74,4 +75,3 @@ const activeNavClass = `
     text-green-500
     after:scale-x-100
 `;
-export default Header

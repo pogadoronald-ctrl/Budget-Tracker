@@ -1,15 +1,16 @@
 import './MainLayout.css'
 import Header from '../components/Header.jsx'
+import { Outlet } from 'react-router-dom';
 
-function MainLayout({ children }) {
+export default function MainLayout() {
     return (
-        <div className="layout">
-            <Header />
-            <main className="content">
-                {children}
-            </main>
-        </div>
+        <> 
+            <div className="layout">
+                <Header />
+                <main className="content">
+                    <Outlet />
+                </main>
+            </div>
+        </>
     )
 }
-
-export default MainLayout
