@@ -1,4 +1,8 @@
-import { LuReceipt, LuSearch } from "react-icons/lu"
+import { LuReceipt } from "react-icons/lu"
+
+import Searchbar from "../../components/Searchbar.jsx"
+import DateRange from "../../components/DateRange.jsx"
+import Filter from "../../components/Filter.jsx"
 
 
 export default function Transactions(){
@@ -25,12 +29,16 @@ export default function Transactions(){
                 </button>
             </div>
 
-            <div>
-                <LuSearch />
-                <h1>test
-                </h1>
-                <h1>test2</h1>
-                <h1>test3</h1>
+            <div className="flex items-center gap-4 mt-8">
+                <div className="relative w-72 max-w-sm">
+                    <Searchbar /> 
+                </div>
+                <div className="w-78"> 
+                    <DateRange />
+                </div>
+                <div className="w-78"> 
+                    <Filter />
+                </div>
             </div>
         </>
     )
