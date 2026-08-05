@@ -1,9 +1,9 @@
-import { LuReceipt } from "react-icons/lu"
+import { LuReceipt, LuPencil, LuTrash2 } from "react-icons/lu"
 
 import Searchbar from "../../components/Searchbar.jsx"
 import DateRange from "../../components/DateRange.jsx"
 import Filter from "../../components/Filter.jsx"
-
+import  transactions from "../../components/tables/MockTransactionsData.jsx"
 
 export default function Transactions(){
     return (
@@ -39,6 +39,74 @@ export default function Transactions(){
                 <div className="w-78"> 
                     <Filter />
                 </div>
+            </div>
+
+            <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table className="w-full">
+                    <thead className="bg-gray-50">
+                        <tr className="text-left text-sm text-gray-600">
+                            <th className="px-6 py-4 font-semibold">Description</th>
+                            <th className="px-6 py-4 font-semibold">Category</th>
+                            <th className="px-6 py-4 font-semibold">Date</th>
+                            <th className="px-6 py-4 font-semibold">Type</th>
+                            <th className="px-6 py-4 font-semibold text-right">Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {transactions.map((transaction) => (
+                            <tr
+                                key={transaction.id}
+                                className="border-t border-gray-100 hover:bg-gray-50"
+                            >
+                                <td className="px-6 py-4 font-medium text-gray-800">
+                                    {transaction.description}
+                                </td>
+
+                                <td className="px-6 py-4">
+                                    <p className="font-medium text-gray-800">
+                                        {transaction.category}
+                                    </p>
+                                    <p className="text-sm text-gray-400">
+                                        {transaction.subcategory}
+                                    </p>
+                                </td>
+
+                                <td className="px-6 py-4 text-gray-700">
+                                    {transaction.date}
+                                </td>
+
+                                <td className="px-6 py-4">
+                                    <span
+                                        className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                                            transaction.type === "Income"
+                                                ? "bg-red-100 text-red-600"
+                                                : "bg-green-100 text-green-600"
+                                        }`}
+                                    >
+                                        {transaction.type}
+                                    </span>
+                                </td>
+
+                                <td className="px-6 py-4">
+                                    <div className="flex items-center justify-end gap-4">
+                                        <span className="font-semibold text-gray-800">
+                                            {transaction.amount}
+                                        </span>
+
+                                        <button className="text-gray-500 transition hover:text-green-600">
+                                            <LuPencil size={18} />
+                                        </button>
+
+                                        <button className="text-gray-500 transition hover:text-red-600">
+                                            <LuTrash2 size={18} />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </>
     )
