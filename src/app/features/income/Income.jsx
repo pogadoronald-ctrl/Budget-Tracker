@@ -1,6 +1,7 @@
-import { LuWallet } from "react-icons/lu"
+import { LuWallet, LuBanknote, LuClipboardList, LuTrophy, LuBriefcaseBusiness } from "react-icons/lu"
 import Searchbar from "../../components/Searchbar"
 import DateRange from "../../components/DateRange"
+import SummaryCard from "../../components/SummaryCard"
 
 export default function Income(){
     return(
@@ -33,6 +34,30 @@ export default function Income(){
                 <div className="w-78">
                     <DateRange />
                 </div>
+            </div>
+
+            <div className="grid grid-cols-4 gap-6 mt-8">
+                <SummaryCard 
+                    title="Total Income"
+                    amount="30,000"
+                    icon={<LuBanknote className="text-gray-500" />}
+                />
+                <SummaryCard 
+                    title="Income Entries"
+                    amount="5"
+                    icon={<LuClipboardList className="text-gray-500" />}
+                />
+                <SummaryCard 
+                    title="Largest Income"
+                    amount="20,000"
+                    icon={<LuTrophy className="text-gray-500" />}
+                />
+                <SummaryCard 
+                    title="Avg. Monthly"
+                    amount="33,000"
+                    icon={<LuBriefcaseBusiness className="text-gray-500" />}
+                />
+
             </div>
         </>
     )
