@@ -33,7 +33,7 @@ export default function Transactions(){
                 <div className="relative w-72 max-w-sm">
                     <Searchbar /> 
                 </div>
-                <div className="w-78"> 
+                <div className="w-58"> 
                     <DateRange />
                 </div>
                 <div className="w-78"> 

@@ -12,7 +12,7 @@ export default function SummaryCard({ title, amount, icon, className="", }) {
             `}
         >
             <div className="flex items-center justify-between">
-                <h5 className="text-base font-semibold text-gray-500">
+                <h5 className="text-base text-gray-500">
                     {title}
                 </h5>
 
