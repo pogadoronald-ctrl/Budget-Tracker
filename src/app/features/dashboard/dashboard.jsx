@@ -13,6 +13,7 @@ import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart"
 import RecentTransactions from "../../components/tables/RecentTransactions";
 import MonthlySpendingChart from "../../components/charts/MonthlySpendingChart";
 import BudgetLimitChart from "../../components/charts/BudgetLimitChart";
+import DateRange from "../../components/DateRange.jsx";
 
 
 export default function Dashboard() {
@@ -34,29 +35,35 @@ export default function Dashboard() {
                         </p>
                     </div>
                 </div>
-
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-3 rounded-xl shadow-sm">
-                    Add Transaction
-                </button>
+                <div className="flex items-center">
+                    <div className="mr-4">
+                        <DateRange />
+                    </div>
+                    
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-3 rounded-xl shadow-sm">
+                        Add Transaction
+                    </button>
+                </div>
+                
             </div>
 
             <div className="grid grid-cols-4 gap-6">
                 <SummaryCard 
                     className="border-l-4 border-blue-500"
                     title="Current Balance"
-                    amount="37,000"
+                    amount="₱37,000"
                     icon={<LuWallet className="text-blue-500" />}
                 />
                 <SummaryCard 
                     className="border-l-4 border-green-500"
                     title="Total Income"
-                    amount="10,000"
+                    amount="₱10,000"
                     icon={<LuTrendingUp className="text-green-500" />}
                 />
                 <SummaryCard 
                     className="border-l-4 border-red-500"
                     title="Total Expenses"
-                    amount="5,000"
+                    amount="₱5,000"
                     icon={<LuTrendingDown className="text-red-500" />}
                 />
                 <SummaryCard 

@@ -39,7 +39,7 @@ export default function Income(){
             <div className="grid grid-cols-4 gap-6 mt-8">
                 <SummaryCard 
                     title="Total Income"
-                    amount="30,000"
+                    amount="₱30,000"
                     icon={<LuBanknote className="text-gray-500" />}
                 />
                 <SummaryCard 
@@ -49,12 +49,12 @@ export default function Income(){
                 />
                 <SummaryCard 
                     title="Largest Income"
-                    amount="20,000"
+                    amount="₱20,000"
                     icon={<LuTrophy className="text-gray-500" />}
                 />
                 <SummaryCard 
                     title="Avg. Monthly"
-                    amount="33,000"
+                    amount="₱33,000"
                     icon={<LuBriefcaseBusiness className="text-gray-500" />}
                 />
 

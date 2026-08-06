@@ -22,7 +22,7 @@ export default function SummaryCard({ title, amount, icon, className="", }) {
             </div>
 
             <p className="mt-2 text-xl font-bold text-gray-900">
-                ₱{amount}
+                {amount}
             </p>
         </div>
     );
