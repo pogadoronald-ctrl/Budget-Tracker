@@ -1,4 +1,3 @@
-import "./dashboard.css";
 import {
     LuWallet,
     LuTrendingUp,
@@ -7,7 +6,7 @@ import {
     LuLayoutDashboard
 } from "react-icons/lu";
 
-import SummaryCard from "../../components/SummaryCard";
+import SummaryCard from "../../components/SummaryCard.jsx";
 import ChartCard from "../../components/ChartCard";
 import IncomeExpenseChart from "../../components/charts/IncomeExpenseChart";
 import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart";
@@ -16,7 +15,7 @@ import MonthlySpendingChart from "../../components/charts/MonthlySpendingChart";
 import BudgetLimitChart from "../../components/charts/BudgetLimitChart";
 
 
-function Dashboard() {
+export default function Dashboard() {
     return (
         <div>
             <div className="flex items-center justify-between mb-8">
@@ -42,28 +41,28 @@ function Dashboard() {
             </div>
 
             <div className="grid grid-cols-4 gap-6">
-                <SummaryCard
+                <SummaryCard 
+                    className="border-l-4 border-blue-500"
                     title="Current Balance"
                     amount="37,000"
-                    type="balance"
                     icon={<LuWallet className="text-blue-500" />}
                 />
-                <SummaryCard
+                <SummaryCard 
+                    className="border-l-4 border-green-500"
                     title="Total Income"
                     amount="10,000"
-                    type="income"
                     icon={<LuTrendingUp className="text-green-500" />}
                 />
-                <SummaryCard
+                <SummaryCard 
+                    className="border-l-4 border-red-500"
                     title="Total Expenses"
                     amount="5,000"
-                    type="expenses"
                     icon={<LuTrendingDown className="text-red-500" />}
                 />
-                <SummaryCard
+                <SummaryCard 
+                    className="border-l-4 border-yellow-500"
                     title="Net Savings"
                     amount="2,500"
-                    type="savings"
                     icon={<LuPiggyBank className="text-yellow-500" />}
                 />
 
@@ -97,4 +96,3 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
