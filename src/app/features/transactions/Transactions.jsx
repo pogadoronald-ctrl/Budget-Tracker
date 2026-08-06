@@ -45,11 +45,11 @@ export default function Transactions(){
                 <table className="w-full">
                     <thead className="bg-gray-50">
                         <tr className="text-left text-sm text-gray-600">
-                            <th className="px-6 py-4 font-semibold">Description</th>
-                            <th className="px-6 py-4 font-semibold">Category</th>
-                            <th className="px-6 py-4 font-semibold">Date</th>
-                            <th className="px-6 py-4 font-semibold">Type</th>
-                            <th className="px-6 py-4 font-semibold text-right">Amount</th>
+                            <th className="px-6 py-4 font-semibold">DESCRIPTION</th>
+                            <th className="px-6 py-4 font-semibold">CATEGORY</th>
+                            <th className="px-6 py-4 font-semibold">DATE</th>
+                            <th className="px-6 py-4 font-semibold">TYPE</th>
+                            <th className="px-6 py-4 font-semibold text-right">AMOUNT</th>
                         </tr>
                     </thead>
 
@@ -60,7 +60,12 @@ export default function Transactions(){
                                 className="border-t border-gray-100 hover:bg-gray-50"
                             >
                                 <td className="px-6 py-4 font-medium text-gray-800">
-                                    {transaction.description}
+                                    <div className="flex gap-4 items-center">
+                                        <div className="text-s text-gray-700 bg-gray-200 rounded-xl px-2 py-2">
+                                            <LuReceipt />
+                                        </div>
+                                        {transaction.description}
+                                    </div>
                                 </td>
 
                                 <td className="px-6 py-4">
