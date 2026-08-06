@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { LuTags } from "react-icons/lu"
 
+import CategoryCard from "../../components/CategoryCard";
+import { categories } from "../../components/mockData/BudgetData";
+
 export default function Budgets(){
     const [activeTab, setActiveTab] = useState("all");
 
@@ -47,6 +50,25 @@ export default function Budgets(){
                         {tab.label}
                     </button>
                 ))}
+            </div>
+
+            <div className="grid grid-cols-3 gap-6">
+                {categories.map((category) => {
+                    const Icon = category.icon;
+
+                    return (
+                        <CategoryCard
+                            key={category.id}
+                            title={category.title}
+                            icon={<Icon className="text-xl text-white" />}
+                            color={category.color}
+                            transactions={category.transactions}
+                            spent={category.spent}
+                            limit={category.limit}
+                            subcategories={category.subcategories}
+                        />
+                    );
+                })}
             </div>
         </>
     )
