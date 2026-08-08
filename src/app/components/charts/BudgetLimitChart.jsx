@@ -1,11 +1,5 @@
 import { Progress } from "react";
-
-const budgets = [
-    { category: "Food", spent: 12000, limit: 15000 },
-    { category: "Bills", spent: 8000, limit: 10000 },
-    { category: "Transportation", spent: 5000, limit: 7000 },
-    { category: "Entertainment", spent: 3500, limit: 5000 },
-];
+import { categories } from "../mockData/BudgetData";
 
 function BudgetLimitChart() {
     return (
@@ -17,29 +11,29 @@ function BudgetLimitChart() {
             </div>
 
             <div className="space-y-5">
-                {budgets.map((budget) => {
+                {categories.map((categories) => {
                     const percentage = Math.min(
-                        (budget.spent / budget.limit) * 100,
+                        (categories.spent / categories.limit) * 100,
                         100
                     );
 
                     return (
-                        <div key={budget.category}>
+                        <div key={categories.title}>
                             <div className="flex justify-between text-sm mb-2">
                                 <span className="font-medium">
-                                    {budget.category}
+                                    {categories.title}
                                 </span>
 
                                 <span className="text-gray-500">
-                                    ₱{budget.spent.toLocaleString()} / ₱
-                                    {budget.limit.toLocaleString()}
+                                    ₱{categories.spent.toLocaleString()} / ₱
+                                    {categories.limit.toLocaleString()}
                                 </span>
                             </div>
 
                             <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
                                 <div
                                     className={`h-full rounded-full transition-all ${
-                                        percentage < 70
+                                        percentage < 50
                                             ? "bg-green-500"
                                             : percentage < 90
                                             ? "bg-yellow-500"
