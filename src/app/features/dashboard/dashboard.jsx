@@ -7,7 +7,7 @@ import {
 } from "react-icons/lu";
 
 import SummaryCard from "../../components/SummaryCard.jsx";
-import ChartCard from "../../features/dashboard/chartCard/ChartCard";
+import ChartCard from "./chartCard/ChartCard.jsx"
 import IncomeExpenseChart from "../../components/charts/IncomeExpenseChart";
 import ExpenseCategoryChart from "../../components/charts/ExpensesCategoryChart";
 import RecentTransactions from "../../components/tables/RecentTransactions";
