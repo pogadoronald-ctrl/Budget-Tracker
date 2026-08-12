@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LuTags } from "react-icons/lu"
 
-import CategoryCard from "../../components/CategoryCard";
+import CategoryCard from "./categoryCard/CategoryCard";
 import { categories } from "../../components/mockData/BudgetData";
 
 export default function Budgets(){
