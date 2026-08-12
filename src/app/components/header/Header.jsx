@@ -1,5 +1,5 @@
 import './Header.css'
-import logo from '../../assets/logo-title.svg'
+import logo from '../../../assets/logo-title.svg'
 import { LuUser } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
