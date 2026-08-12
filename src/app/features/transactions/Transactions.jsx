@@ -1,6 +1,6 @@
 import { LuReceipt, LuPencil, LuTrash2 } from "react-icons/lu"
 
-import Searchbar from "../../components/Searchbar.jsx"
+import Searchbar from "../../components/searchbar/Searchbar"
 import DateRange from "../../components/DateRange.jsx"
 import Filter from "../../components/Filter.jsx"
 import  transactions from "../../components/tables/MockTransactionsData.jsx"
