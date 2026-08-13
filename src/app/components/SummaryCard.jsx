@@ -1,5 +1,4 @@
 export default function SummaryCard({ title, amount, icon, className="", }) {
-    console.log(className)
     return (
         <div
             className={`
