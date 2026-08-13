@@ -14,9 +14,15 @@ import RecentTransactions from "../../components/tables/RecentTransactions";
 import MonthlySpendingChart from "../../components/charts/MonthlySpendingChart";
 import BudgetLimitChart from "../../components/charts/BudgetLimitChart";
 import DateRange from "../../components/DateRange.jsx";
+import transactions from "../../components/tables/MockTransactionsData.jsx";
 
 
 export default function Dashboard() {
+    const currentBalance = transactions.reduce(
+        (total, transaction) => total + transaction.amount,
+        0
+    );
+
     return (
         <div>
             <div className="flex items-center justify-between mb-8">
@@ -51,7 +57,7 @@ export default function Dashboard() {
                 <SummaryCard 
                     className="border-l-4 border-blue-500"
                     title="Current Balance"
-                    amount="₱37,000"
+                    amount= {`₱${currentBalance.toLocaleString()}`}
                     icon={<LuWallet className="text-blue-500" />}
                 />
                 <SummaryCard 
