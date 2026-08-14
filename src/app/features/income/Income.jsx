@@ -1,5 +1,5 @@
 import { LuWallet, LuBanknote, LuClipboardList, LuChartColumnIncreasing, LuPencil, LuTrash2 } from "react-icons/lu"
-import Searchbar from "../../components/searchbar/Searchbar"
+import Searchbar from "../../components/layouts/Searchbar"
 import DateRange from "../../components/DateRange"
 import SummaryCard from "../../components/SummaryCard"
 import transactions from "../../components/tables/MockTransactionsData"
