@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
-import MainLayout from './app/layouts/MainLayout.jsx'
+import MainLayout from './app/components/layouts/MainLayout.jsx'
 import Dashboard from './app/features/dashboard/Dashboard.jsx'
 import Transactions from './app/features/transactions/Transactions.jsx'
 import Income from './app/features/income/Income.jsx'
